@@ -1,25 +1,13 @@
-# my-trello
+# 概要
+Vue.jsできるようになりたい。
 
-## Project setup
-```
-npm install
-```
+# 開発を通して身につけること
+1. Trelloの偽物を作ってVue.jsを全体的に理解する。
+2. git flowでやる。
+3. 良い感じのコミットメッセージ書く。
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-# my-trello
+# タスク一覧
+- [ ] TOPページの作成
+- [ ] リスト機能作成
+- [ ] カード機能作成
+- [ ] ドラッグ&ドロップ機能作成
