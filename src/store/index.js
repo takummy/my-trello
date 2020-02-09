@@ -2,10 +2,31 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 Vue.use(Vuex)
+// storeに保存されているリストを取得
+const savedLists = localStorage.getItem('trello-lists')
 
-export default new Vuex.Store({
+const store =  new Vuex.Store({
   state: {
-    lists: []
+    // storeにリストがなければデフォルトを設定
+    lists: savedLists ? JSON.parse(savedLists) : [
+      {
+        title: 'Backlog',
+        cards: [
+          { body: 'English'},
+          { body: 'Mathmatics'}
+        ]
+      },
+      {
+        title: 'Todo',
+        cards: [
+          { body: 'Science' }
+        ]
+      },
+      {
+        title: 'Doing',
+        cards: []
+      }
+    ]
   },
   mutations: {
     addlist(state, payload) {
@@ -20,3 +41,12 @@ export default new Vuex.Store({
   modules: {
   }
 })
+
+// subscribeはストアのインスタンスメソッドで、全てのmutationの後に呼ばれ
+// key: valueでlocalStorageへ保存
+// JSON.stringify(保存するデータ)でJSON形式に変換
+store.subscribe((mutation, state) => {
+  localStorage.setItem('trello-lists', JSON.stringify(state.lists))
+})
+
+export default store
