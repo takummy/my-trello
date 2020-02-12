@@ -26,4 +26,4 @@ export default {
     }
   }
 }
-</script>template
+</script>
