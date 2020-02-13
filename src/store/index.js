@@ -34,6 +34,9 @@ const store =  new Vuex.Store({
     },
     removelist(state, payload) {
       state.lists.splice(payload.listIndex, 1)
+    },
+    addCardToList(state, payload) {
+      state.lists[payload.listIndex].cards.push({ body: payload.body })
     }
   },
   actions: {
@@ -42,6 +45,9 @@ const store =  new Vuex.Store({
     },
     removeList(context, payload) {
       context.commit('removelist', payload)
+    },
+    addCardToList(context, payload) {
+      context.commit('addCardToList', payload)
     }
   },
   modules: {
