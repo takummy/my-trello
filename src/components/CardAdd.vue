@@ -46,7 +46,7 @@ export default {
   },
   methods: {
     startEditing: function() {
-      this.isEditing = true 
+      this.isEditing = true
     },
     finishEditing: function() {
       this.isEditing = false
