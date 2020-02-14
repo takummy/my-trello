@@ -1,6 +1,12 @@
 # 概要
 Vue.jsできるようになりたい。
 
+# 使用したもの
+- Vue 2.6.11
+- Vue CLI 4.1.2
+- Vuex
+- Firebase 
+
 # 開発を通して身につけること
 1. Trelloの偽物を作ってVue.jsを全体的に理解する。
 2. git flowでやる。
